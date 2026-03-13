@@ -10,6 +10,7 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="청년 지원 정책 모아보기" />
 	<meta property="og:description" content="흩어진 청년 지원 정책을 한눈에 확인하세요. 주거, 일자리, 교육, 복지, 창업 등 분야별 청년 지원 사업 정보를 모아 제공합니다." />
+	<meta property="og:url" content="https://youth-support-program-collector.vercel.app" />
 	<meta property="og:locale" content="ko_KR" />
 </svelte:head>
 
