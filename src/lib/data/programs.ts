@@ -9,7 +9,9 @@ export const programs: Program[] = [
 		url: 'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004661',
 		source: '복지로',
 		ageRange: '19~34세',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['월세', '집', '임대', '주거비', '월세지원', '월세보조']
 	},
 	{
 		id: 'youth-jeonse-loan',
@@ -19,7 +21,9 @@ export const programs: Program[] = [
 		url: 'https://nhuf.molit.go.kr/',
 		source: '주택도시기금',
 		ageRange: '19~34세',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['전세', '대출', '보증금', '집', '전세자금', '저금리']
 	},
 	{
 		id: 'happy-housing',
@@ -29,7 +33,9 @@ export const programs: Program[] = [
 		url: 'https://www.myhome.go.kr/',
 		source: 'LH한국토지주택공사',
 		ageRange: '19~39세',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['임대', '공공주택', '집', '아파트', '주거', '신혼']
 	},
 	{
 		id: 'kwork-youth',
@@ -39,7 +45,9 @@ export const programs: Program[] = [
 		url: 'https://www.work24.go.kr/ua/z/z/1300/selectEmssRqutIntro.do',
 		source: '고용24',
 		ageRange: '15~69세',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['취업', '구직', '수당', '돈', '취준', '구직활동']
 	},
 	{
 		id: 'youth-internship',
@@ -49,7 +57,9 @@ export const programs: Program[] = [
 		url: 'https://yw.work24.go.kr/main.do',
 		source: '고용24',
 		ageRange: '15~34세',
-		region: '전국'
+		region: '전국',
+		deadline: '2025-12-31',
+		tags: ['인턴', '취업', '경력', '직장', '채용', '체험']
 	},
 	{
 		id: 'youth-digital-academy',
@@ -59,7 +69,9 @@ export const programs: Program[] = [
 		url: 'https://www.work24.go.kr/hr/a/a/1100/trnnCrsInf2.do?pageId=6',
 		source: '고용24',
 		ageRange: '18~34세',
-		region: '전국'
+		region: '전국',
+		deadline: '2025-06-30',
+		tags: ['IT', '개발', '코딩', '디지털', '프로그래밍', '교육']
 	},
 	{
 		id: 'kmooc',
@@ -68,7 +80,9 @@ export const programs: Program[] = [
 		category: 'education',
 		url: 'http://www.kmooc.kr/',
 		source: '교육부',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['강의', '온라인', '무료', '대학', '학습', '공부']
 	},
 	{
 		id: 'youth-tomorrow-learning-card',
@@ -78,7 +92,9 @@ export const programs: Program[] = [
 		url: 'https://www.work24.go.kr/cm/c/f/1100/selecSystInfo.do?systId=SI00000351&systClId=SC00000004',
 		source: '고용24',
 		ageRange: '15세 이상',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['훈련', '자격증', '학원', '교육비', '배움', '직업훈련']
 	},
 	{
 		id: 'youth-savings',
@@ -88,7 +104,9 @@ export const programs: Program[] = [
 		url: 'https://www.kinfa.or.kr/',
 		source: '서민금융진흥원',
 		ageRange: '19~34세',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['저축', '적금', '목돈', '재테크', '돈', '금융']
 	},
 	{
 		id: 'youth-mental-health',
@@ -98,7 +116,9 @@ export const programs: Program[] = [
 		url: 'https://www.bokjiro.go.kr/ssis-tbu/twataa/wlfareInfo/moveTWAT52011M.do?wlfareInfoId=WLF00004671',
 		source: '복지로',
 		ageRange: '19~34세',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['상담', '심리', '멘탈', '우울', '마음', '건강']
 	},
 	{
 		id: 'youth-activity-support',
@@ -108,7 +128,9 @@ export const programs: Program[] = [
 		url: 'https://youth.seoul.go.kr/',
 		source: '서울시',
 		ageRange: '19~34세',
-		region: '서울'
+		region: '서울',
+		deadline: '상시',
+		tags: ['수당', '지원금', '돈', '활동', '미취업', '생활비']
 	},
 	{
 		id: 'youth-startup-fund',
@@ -118,7 +140,9 @@ export const programs: Program[] = [
 		url: 'https://start.kosmes.or.kr/',
 		source: '중소벤처기업부',
 		ageRange: '만 39세 이하',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['창업', '사업', '자금', '스타트업', '사업화', '교육']
 	},
 	{
 		id: 'tips-program',
@@ -127,7 +151,9 @@ export const programs: Program[] = [
 		category: 'startup',
 		url: 'https://www.jointips.or.kr/',
 		source: '중소벤처기업부',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['투자', 'R&D', '기술', '스타트업', '엔젤', '벤처']
 	},
 	{
 		id: 'youth-startup-support',
@@ -137,6 +163,8 @@ export const programs: Program[] = [
 		url: 'https://www.k-startup.go.kr/',
 		source: '중소벤처기업부',
 		ageRange: '만 39세 이하',
-		region: '전국'
+		region: '전국',
+		deadline: '상시',
+		tags: ['창업', '예비창업', '자금', '사업화', '스타트업']
 	}
 ];

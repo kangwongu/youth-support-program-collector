@@ -3,6 +3,7 @@
 	import CategoryFilter from '$lib/components/CategoryFilter.svelte';
 	import ProgramCard from '$lib/components/ProgramCard.svelte';
 	import { programs } from '$lib/data/programs';
+	import { categoryMap } from '$lib/data/categories';
 	import type { Category } from '$lib/types';
 
 	let searchQuery = $state('');
@@ -16,7 +17,9 @@
 				return (
 					p.title.toLowerCase().includes(q) ||
 					p.description.toLowerCase().includes(q) ||
-					p.source.toLowerCase().includes(q)
+					p.source.toLowerCase().includes(q) ||
+					p.tags.some((tag) => tag.toLowerCase().includes(q)) ||
+					categoryMap[p.category].label.includes(q)
 				);
 			}
 			return true;

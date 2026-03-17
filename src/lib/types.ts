@@ -9,6 +9,8 @@ export interface Program {
 	source: string;
 	ageRange?: string;
 	region?: string;
+	deadline: string | null;
+	tags: string[];
 }
 
 export interface CategoryInfo {
