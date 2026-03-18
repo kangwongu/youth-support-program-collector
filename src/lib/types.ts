@@ -1,4 +1,4 @@
-export type Category = 'housing' | 'jobs' | 'education' | 'welfare' | 'startup';
+export type Category = 'housing' | 'jobs' | 'education' | 'welfare' | 'startup' | 'finance';
 
 export interface Program {
 	id: string;
@@ -11,6 +11,10 @@ export interface Program {
 	region?: string;
 	deadline: string | null;
 	tags: string[];
+	content: string;
+	applicationMethod?: string;
+	applicationPeriod?: string;
+	requiredDocuments?: string[];
 }
 
 export interface CategoryInfo {

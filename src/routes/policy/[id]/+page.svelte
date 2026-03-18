@@ -8,6 +8,12 @@
 	let cat = $derived(categoryMap[program.category]);
 	let expired = $derived(isExpired(program.deadline));
 	let deadlineText = $derived(formatDeadline(program.deadline));
+
+	let hasApplicationInfo = $derived(
+		program.applicationMethod ||
+			program.applicationPeriod ||
+			(program.requiredDocuments && program.requiredDocuments.length > 0)
+	);
 </script>
 
 <svelte:head>
@@ -27,6 +33,7 @@
 	</a>
 
 	<article class="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm">
+		<!-- 헤더: 카테고리 뱃지 + 마감일 + 제목 + 메타 -->
 		<div class="p-6">
 			<div class="mb-4 flex flex-wrap items-center gap-2">
 				<span
@@ -36,45 +43,86 @@
 					{cat.emoji} {cat.label}
 				</span>
 				{#if expired}
-					<span class="inline-block rounded-full bg-red-500 px-2.5 py-1 text-xs font-semibold text-white">마감</span>
+					<span
+						class="inline-block rounded-full bg-red-500 px-2.5 py-1 text-xs font-semibold text-white"
+						>마감</span
+					>
 				{:else if deadlineText}
-					<span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-500">{deadlineText}</span>
+					<span class="rounded-full bg-gray-100 px-2.5 py-1 text-xs text-gray-500"
+						>{deadlineText}</span
+					>
 				{/if}
 			</div>
 
 			<h1 class="mb-3 text-2xl font-bold text-gray-900">{program.title}</h1>
-			<p class="mb-6 leading-relaxed text-gray-500">{program.description}</p>
 
-			<div class="space-y-2 border-t border-gray-100 pt-4 text-sm text-gray-600">
+			<div class="flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500">
 				{#if program.ageRange}
-					<div class="flex gap-2">
-						<span>🎯</span>
-						<span><strong>대상:</strong> {program.ageRange}</span>
-					</div>
+					<span>🎯 {program.ageRange}</span>
 				{/if}
 				{#if program.region}
-					<div class="flex gap-2">
-						<span>📍</span>
-						<span><strong>지역:</strong> {program.region}</span>
-					</div>
+					<span>📍 {program.region}</span>
 				{/if}
-				<div class="flex gap-2">
-					<span>📌</span>
-					<span><strong>출처:</strong> {program.source}</span>
-				</div>
-				{#if program.tags.length > 0}
-					<div class="flex gap-2">
-						<span>🏷️</span>
-						<div class="flex flex-wrap gap-1">
-							{#each program.tags as tag}
-								<span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500">{tag}</span>
-							{/each}
-						</div>
-					</div>
-				{/if}
+				<span>📌 {program.source}</span>
 			</div>
 		</div>
 
+		<!-- 정책 소개 -->
+		{#if program.content}
+			<div class="border-t border-gray-100 p-6">
+				<h2 class="mb-3 text-lg font-semibold text-gray-900">📋 정책 소개</h2>
+				<div class="space-y-3 leading-relaxed text-gray-600">
+					{#each program.content.split('\n\n') as paragraph}
+						<p>{paragraph}</p>
+					{/each}
+				</div>
+			</div>
+		{/if}
+
+		<!-- 신청 정보 -->
+		{#if hasApplicationInfo}
+			<div class="border-t border-gray-100 p-6">
+				<h2 class="mb-3 text-lg font-semibold text-gray-900">📝 신청 정보</h2>
+				<div class="space-y-2 text-sm text-gray-600">
+					{#if program.applicationMethod}
+						<div class="flex gap-2">
+							<span class="shrink-0 font-medium text-gray-700">신청 방법:</span>
+							<span>{program.applicationMethod}</span>
+						</div>
+					{/if}
+					{#if program.applicationPeriod}
+						<div class="flex gap-2">
+							<span class="shrink-0 font-medium text-gray-700">신청 기간:</span>
+							<span>{program.applicationPeriod}</span>
+						</div>
+					{/if}
+					{#if program.requiredDocuments && program.requiredDocuments.length > 0}
+						<div class="flex gap-2">
+							<span class="shrink-0 font-medium text-gray-700">필요 서류:</span>
+							<span>{program.requiredDocuments.join(', ')}</span>
+						</div>
+					{/if}
+				</div>
+			</div>
+		{/if}
+
+		<!-- 태그 -->
+		{#if program.tags.length > 0}
+			<div class="border-t border-gray-100 p-6">
+				<div class="flex items-center gap-2">
+					<span class="text-sm text-gray-500">🏷️</span>
+					<div class="flex flex-wrap gap-1">
+						{#each program.tags as tag}
+							<span class="rounded-full bg-gray-100 px-2 py-0.5 text-xs text-gray-500"
+								>{tag}</span
+							>
+						{/each}
+					</div>
+				</div>
+			</div>
+		{/if}
+
+		<!-- 외부 링크 -->
 		<div class="border-t border-gray-100 p-6">
 			<a
 				href={program.url}
