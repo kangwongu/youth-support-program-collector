@@ -44,4 +44,15 @@
 		</div>
 		<p class="text-center text-xs text-gray-300">총 {filtered.length}개 정책</p>
 	{/if}
+
+	<div class="mt-8 rounded-2xl border border-blue-100 bg-blue-50 p-6 text-center">
+		<h2 class="mb-1 text-lg font-semibold text-blue-900">📖 청년 정책 활용 가이드</h2>
+		<p class="mb-4 text-sm text-blue-700">정책 신청 방법, 자격 확인 팁 등 실용 가이드를 확인해 보세요.</p>
+		<a
+			href="/guide"
+			class="inline-block rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-blue-700"
+		>
+			가이드 보기 →
+		</a>
+	</div>
 </div>

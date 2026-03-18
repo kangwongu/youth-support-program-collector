@@ -17,10 +17,17 @@
 <div class="flex min-h-screen flex-col bg-gray-50 text-gray-900">
 	<header class="border-b border-gray-100 bg-white">
 		<div class="mx-auto max-w-5xl px-4 py-6">
-			<h1 class="text-2xl font-bold tracking-tight">🎯 청년 지원 정책 모아보기</h1>
-			<p class="mt-1 text-sm text-gray-500">
-				흩어진 청년 지원 정책을 한눈에 확인하세요
-			</p>
+			<a href="/" class="block">
+				<h1 class="text-2xl font-bold tracking-tight">🎯 청년 지원 정책 모아보기</h1>
+				<p class="mt-1 text-sm text-gray-500">
+					흩어진 청년 지원 정책을 한눈에 확인하세요
+				</p>
+			</a>
+			<nav class="mt-3 flex gap-4 text-sm font-medium text-gray-500">
+				<a href="/" class="hover:text-blue-600 transition-colors">홈</a>
+				<a href="/guide" class="hover:text-blue-600 transition-colors">가이드</a>
+				<a href="/about" class="hover:text-blue-600 transition-colors">사이트 소개</a>
+			</nav>
 		</div>
 	</header>
 
@@ -70,7 +77,12 @@
 					정책 제보하기 →
 				</a>
 			</div>
-			<p class="mt-4 text-xs text-gray-300">
+			<div class="mt-4 flex gap-3 text-xs text-gray-400">
+				<a href="/about" class="hover:text-gray-600 hover:underline">사이트 소개</a>
+				<span>|</span>
+				<a href="/privacy" class="hover:text-gray-600 hover:underline">개인정보처리방침</a>
+			</div>
+			<p class="mt-2 text-xs text-gray-300">
 				본 사이트는 정보 제공 목적이며, 각 정책의 상세 내용은 원본 사이트를 확인해 주세요.
 			</p>
 		</div>
