@@ -1,7 +1,24 @@
 <script lang="ts">
 	import './layout.css';
+	import { page } from '$app/stores';
 
 	let { children } = $props();
+
+	const SITE_URL = 'https://youth-support-program-collector.vercel.app';
+
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		name: '청년 지원 정책 모아보기',
+		url: SITE_URL,
+		description: '흩어진 청년 지원 정책을 한눈에 확인하세요. 주거, 일자리, 교육, 복지, 창업 등 분야별 청년 지원 사업 정보를 모아 제공합니다.',
+		inLanguage: 'ko',
+		potentialAction: {
+			'@type': 'SearchAction',
+			target: `${SITE_URL}/?q={search_term_string}`,
+			'query-input': 'required name=search_term_string'
+		}
+	};
 </script>
 
 <svelte:head>
@@ -10,8 +27,11 @@
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="청년 지원 정책 모아보기" />
 	<meta property="og:description" content="흩어진 청년 지원 정책을 한눈에 확인하세요. 주거, 일자리, 교육, 복지, 창업 등 분야별 청년 지원 사업 정보를 모아 제공합니다." />
-	<meta property="og:url" content="https://youth-support-program-collector.vercel.app" />
+	<meta property="og:url" content="{SITE_URL}" />
 	<meta property="og:locale" content="ko_KR" />
+	<meta property="og:site_name" content="청년 지원 정책 모아보기" />
+	<link rel="canonical" href="{SITE_URL}{$page.url.pathname}" />
+	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
 </svelte:head>
 
 <div class="flex min-h-screen flex-col bg-gray-50 text-gray-900">

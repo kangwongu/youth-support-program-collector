@@ -19,7 +19,14 @@
 	</a>
 
 	<h1 class="mb-2 text-2xl font-bold text-gray-900">📖 청년 정책 활용 가이드</h1>
-	<p class="mb-8 text-sm text-gray-500">정책 신청 방법, 자격 확인 팁 등 실용적인 가이드를 모았습니다.</p>
+	<p class="mb-4 text-sm text-gray-500">정책 신청 방법, 자격 확인 팁 등 실용적인 가이드를 모았습니다.</p>
+	<div class="mb-8 rounded-xl bg-gray-50 border border-gray-100 p-5">
+		<p class="text-sm leading-relaxed text-gray-600">
+			청년 지원 정책은 종류가 많고 신청 조건도 제각각이라 어디서부터 시작해야 할지 막막할 수 있습니다.
+			아래 가이드에서는 정책 신청의 기본 절차부터 자격 조건 확인법, 자주 하는 실수까지 실용적인 정보를 정리했습니다.
+			처음 정책을 알아보는 분이라면 <a href="/guide/how-to-apply" class="text-blue-600 hover:underline">신청 방법 총정리</a>부터 읽어보세요.
+		</p>
+	</div>
 
 	<div class="grid gap-4 sm:grid-cols-2">
 		{#each guides as guide (guide.slug)}

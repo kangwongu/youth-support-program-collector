@@ -10,7 +10,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout>
+<ArticleLayout title="청년 정책 신청 시 자주 하는 실수 5가지" description="마감일 놓치기, 소득 기준 오해, 서류 누락 등 청년 정책 신청 시 흔한 실수와 방지 팁을 알려드립니다.">
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">⚠️ 청년 정책 신청 시 자주 하는 실수 5가지</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">

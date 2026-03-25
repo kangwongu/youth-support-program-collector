@@ -1,8 +1,43 @@
 <script lang="ts">
 	import type { Snippet } from 'svelte';
 
-	let { backHref = '/guide', backLabel = '← 목록으로', children }: { backHref?: string; backLabel?: string; children: Snippet } = $props();
+	let {
+		backHref = '/guide',
+		backLabel = '← 목록으로',
+		title = '',
+		description = '',
+		children
+	}: {
+		backHref?: string;
+		backLabel?: string;
+		title?: string;
+		description?: string;
+		children: Snippet;
+	} = $props();
+
+	const SITE_URL = 'https://youth-support-program-collector.vercel.app';
+
+	const articleJsonLd = title
+		? {
+				'@context': 'https://schema.org',
+				'@type': 'Article',
+				headline: title,
+				description: description,
+				publisher: {
+					'@type': 'Organization',
+					name: '청년 지원 정책 모아보기',
+					url: SITE_URL
+				},
+				inLanguage: 'ko'
+			}
+		: null;
 </script>
+
+<svelte:head>
+	{#if articleJsonLd}
+		{@html `<script type="application/ld+json">${JSON.stringify(articleJsonLd)}</script>`}
+	{/if}
+</svelte:head>
 
 <div class="mx-auto max-w-2xl">
 	<a

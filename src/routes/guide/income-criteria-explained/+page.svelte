@@ -10,7 +10,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout>
+<ArticleLayout title="중위소득 기준 쉽게 이해하기" description="중위소득이란 무엇인지, 2026년 기준표와 내 소득 확인 방법을 쉽게 설명합니다.">
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">📊 중위소득 기준 쉽게 이해하기</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">

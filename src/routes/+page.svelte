@@ -28,6 +28,15 @@
 </script>
 
 <div class="space-y-6">
+	<section class="rounded-2xl border border-gray-100 bg-white p-6 shadow-sm">
+		<h2 class="mb-2 text-lg font-bold text-gray-900">청년을 위한 정부 지원 정책, 한곳에서 확인하세요</h2>
+		<p class="text-sm leading-relaxed text-gray-600">
+			주거, 일자리, 교육, 복지, 창업, 금융 등 다양한 분야의 청년 지원 정책을 모아 제공합니다.
+			각 정책의 신청 자격, 지원 내용, 신청 방법을 확인하고 원본 사이트에서 바로 신청할 수 있습니다.
+			현재 총 <strong>{programs.length}개</strong>의 정책 정보를 제공하고 있으며, 새로운 정책이 발표되면 지속적으로 업데이트됩니다.
+		</p>
+	</section>
+
 	<SearchBar value={searchQuery} oninput={(v) => (searchQuery = v)} />
 	<CategoryFilter selected={selectedCategory} onselect={(c) => (selectedCategory = c)} />
 

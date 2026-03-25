@@ -10,7 +10,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout>
+<ArticleLayout title="나에게 맞는 청년 정책 찾기 체크리스트" description="나이, 소득, 취업 상태, 거주 지역 등 조건별로 나에게 맞는 청년 정책을 찾아보세요.">
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">✅ 나에게 맞는 청년 정책 찾기 체크리스트</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">
