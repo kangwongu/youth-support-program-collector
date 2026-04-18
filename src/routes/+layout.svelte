@@ -6,7 +6,7 @@
 
 	const SITE_URL = 'https://youth-support-program-collector.vercel.app';
 
-	const jsonLd = {
+	const websiteJsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'WebSite',
 		name: '청년 지원 정책 모아보기',
@@ -18,6 +18,17 @@
 			target: `${SITE_URL}/?q={search_term_string}`,
 			'query-input': 'required name=search_term_string'
 		}
+	};
+
+	const organizationJsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Organization',
+		name: '청년 지원 정책 모아보기',
+		url: SITE_URL,
+		logo: `${SITE_URL}/favicon.png`,
+		description: '청년 대상 정부·지자체 지원 정책을 큐레이션하는 정보 사이트.',
+		email: 'kwg2358@gmail.com',
+		sameAs: ['https://www.youthcenter.go.kr/', 'https://www.gov.kr/']
 	};
 </script>
 
@@ -31,7 +42,8 @@
 	<meta property="og:locale" content="ko_KR" />
 	<meta property="og:site_name" content="청년 지원 정책 모아보기" />
 	<link rel="canonical" href="{SITE_URL}{$page.url.pathname}" />
-	{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(websiteJsonLd)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(organizationJsonLd)}</script>`}
 </svelte:head>
 
 <div class="flex min-h-screen flex-col bg-gray-50 text-gray-900">

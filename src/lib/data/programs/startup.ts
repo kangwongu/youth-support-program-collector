@@ -3,6 +3,7 @@ import type { Program } from '$lib/types';
 export const startupPrograms: Program[] = [
 	{
 		id: 'youth-startup-fund',
+		dateModified: '2026-04-18',
 		title: '청년창업사관학교',
 		description: '유망 창업 아이템 보유 청년에게 사업화 자금·교육 지원',
 		category: 'startup',
@@ -20,6 +21,7 @@ export const startupPrograms: Program[] = [
 	},
 	{
 		id: 'tips-program',
+		dateModified: '2026-04-18',
 		title: 'TIPS (민간투자주도형 기술창업지원)',
 		description: '엔젤투자 연계 R&D 자금 최대 5억원 지원',
 		category: 'startup',
@@ -36,6 +38,7 @@ export const startupPrograms: Program[] = [
 	},
 	{
 		id: 'youth-startup-support',
+		dateModified: '2026-04-18',
 		title: '예비창업패키지',
 		description: '예비 창업자 대상 사업화 자금 최대 1억원 지원',
 		category: 'startup',
@@ -53,6 +56,7 @@ export const startupPrograms: Program[] = [
 	},
 	{
 		id: 'seoul-startup-hub',
+		dateModified: '2026-04-18',
 		title: '서울창업허브 입주 지원',
 		description: '서울 소재 스타트업에 사무공간 및 액셀러레이팅 프로그램 제공',
 		category: 'startup',
@@ -69,6 +73,7 @@ export const startupPrograms: Program[] = [
 	},
 	{
 		id: 'gyeonggi-startup-campus',
+		dateModified: '2026-04-18',
 		title: '경기 스타트업 캠퍼스',
 		description: '경기도 소재 초기 창업자 대상 사업화 자금 및 공간 지원',
 		category: 'startup',

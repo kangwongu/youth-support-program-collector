@@ -1,5 +1,8 @@
 <script lang="ts">
 	import ArticleLayout from '$lib/components/ArticleLayout.svelte';
+	import { guideMap } from '$lib/data/guides';
+
+	const meta = guideMap['how-to-apply'];
 </script>
 
 <svelte:head>
@@ -10,7 +13,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout title="청년 지원 정책 신청 방법 총정리" description="온통청년, 정부24, 복지로 등 주요 포탈별 청년 정책 신청 방법과 필요 서류, 처리 기간을 총정리했습니다.">
+<ArticleLayout title={meta.title} description={meta.description} slug={meta.slug} publishedAt={meta.publishedAt} updatedAt={meta.updatedAt} author={meta.author} faq={meta.faq}>
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">📝 청년 지원 정책 신청 방법 총정리</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">

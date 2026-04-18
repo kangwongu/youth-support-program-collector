@@ -3,6 +3,7 @@ import type { Program } from '$lib/types';
 export const housingPrograms: Program[] = [
 	{
 		id: 'youth-housing-voucher',
+		dateModified: '2026-04-18',
 		title: '청년 월세 한시 특별지원',
 		description: '월세 부담 완화를 위해 월 최대 20만원씩 12개월 지원',
 		category: 'housing',
@@ -20,6 +21,7 @@ export const housingPrograms: Program[] = [
 	},
 	{
 		id: 'youth-jeonse-loan',
+		dateModified: '2026-04-18',
 		title: '청년전용 버팀목전세자금대출',
 		description: '전세보증금 대출 시 저금리 혜택 제공',
 		category: 'housing',
@@ -37,6 +39,7 @@ export const housingPrograms: Program[] = [
 	},
 	{
 		id: 'happy-housing',
+		dateModified: '2026-04-18',
 		title: '행복주택',
 		description: '대학생·청년·신혼부부를 위한 공공임대주택',
 		category: 'housing',
@@ -54,6 +57,7 @@ export const housingPrograms: Program[] = [
 	},
 	{
 		id: 'seoul-youth-housing',
+		dateModified: '2026-04-18',
 		title: '서울시 역세권 청년주택',
 		description: '역세권에 공급하는 청년 특화 공공·민간임대주택',
 		category: 'housing',
@@ -71,6 +75,7 @@ export const housingPrograms: Program[] = [
 	},
 	{
 		id: 'gyeonggi-youth-rental',
+		dateModified: '2026-04-18',
 		title: '경기도 청년 기숙사',
 		description: '직장 인근 저렴한 기숙사형 주거 제공',
 		category: 'housing',
@@ -88,6 +93,7 @@ export const housingPrograms: Program[] = [
 	},
 	{
 		id: 'youth-housing-deposit-loan',
+		dateModified: '2026-04-18',
 		title: '청년 보증금 반환보증 보험료 지원',
 		description: '전·월세 보증금 반환보증 보험료를 지원하여 보증금 미반환 걱정 해소',
 		category: 'housing',

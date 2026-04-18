@@ -14,14 +14,76 @@
 			program.applicationPeriod ||
 			(program.requiredDocuments && program.requiredDocuments.length > 0)
 	);
+
+	const SITE_URL = 'https://youth-support-program-collector.vercel.app';
+	let canonicalUrl = $derived(`${SITE_URL}/policy/${program.id}`);
+
+	let serviceJsonLd = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'GovernmentService',
+		name: program.title,
+		description: program.description,
+		url: canonicalUrl,
+		serviceType: cat.label,
+		provider: {
+			'@type': 'GovernmentOrganization',
+			name: program.source
+		},
+		...(program.region ? { areaServed: { '@type': 'AdministrativeArea', name: program.region } } : {}),
+		...(program.ageRange
+			? { audience: { '@type': 'PeopleAudience', suggestedMinAge: 19, audienceType: `청년 (${program.ageRange})` } }
+			: {}),
+		dateModified: program.dateModified,
+		inLanguage: 'ko'
+	});
+
+	let breadcrumbJsonLd = $derived({
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: '홈', item: SITE_URL },
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: cat.label,
+				item: `${SITE_URL}/?category=${program.category}`
+			},
+			{ '@type': 'ListItem', position: 3, name: program.title, item: canonicalUrl }
+		]
+	});
+
+	let faqJsonLd = $derived(
+		program.faq && program.faq.length > 0
+			? {
+					'@context': 'https://schema.org',
+					'@type': 'FAQPage',
+					mainEntity: program.faq.map((f) => ({
+						'@type': 'Question',
+						name: f.q,
+						acceptedAnswer: { '@type': 'Answer', text: f.a }
+					}))
+				}
+			: null
+	);
+
+	function formatUpdatedAt(d: string) {
+		const [y, m, day] = d.split('-');
+		return `${y}년 ${parseInt(m)}월 ${parseInt(day)}일`;
+	}
 </script>
 
 <svelte:head>
 	<title>{program.title} | 청년 지원 정책 모아보기</title>
+	<meta name="description" content={program.description} />
 	<meta property="og:title" content={program.title} />
 	<meta property="og:description" content={program.description} />
-	<meta property="og:url" content="https://youth-support.example.com/policy/{program.id}" />
+	<meta property="og:url" content={canonicalUrl} />
 	<meta property="og:type" content="article" />
+	{@html `<script type="application/ld+json">${JSON.stringify(serviceJsonLd)}</script>`}
+	{@html `<script type="application/ld+json">${JSON.stringify(breadcrumbJsonLd)}</script>`}
+	{#if faqJsonLd}
+		{@html `<script type="application/ld+json">${JSON.stringify(faqJsonLd)}</script>`}
+	{/if}
 </svelte:head>
 
 <div class="mx-auto max-w-2xl">
@@ -65,6 +127,10 @@
 				{/if}
 				<span>📌 {program.source}</span>
 			</div>
+
+			<p class="mt-3 text-xs text-gray-400">
+				최종 업데이트: <time datetime={program.dateModified}>{formatUpdatedAt(program.dateModified)}</time>
+			</p>
 		</div>
 
 		<!-- 정책 소개 -->
@@ -102,6 +168,21 @@
 							<span>{program.requiredDocuments.join(', ')}</span>
 						</div>
 					{/if}
+				</div>
+			</div>
+		{/if}
+
+		<!-- FAQ (Phase 2에서 데이터 추가 시 노출) -->
+		{#if program.faq && program.faq.length > 0}
+			<div class="border-t border-gray-100 p-6">
+				<h2 class="mb-3 text-lg font-semibold text-gray-900">❓ 자주 묻는 질문</h2>
+				<div class="space-y-3">
+					{#each program.faq as item}
+						<details class="rounded-lg border border-gray-100 bg-gray-50 p-3">
+							<summary class="cursor-pointer text-sm font-medium text-gray-800">{item.q}</summary>
+							<p class="mt-2 text-sm leading-relaxed text-gray-600">{item.a}</p>
+						</details>
+					{/each}
 				</div>
 			</div>
 		{/if}

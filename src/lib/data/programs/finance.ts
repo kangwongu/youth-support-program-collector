@@ -3,6 +3,7 @@ import type { Program } from '$lib/types';
 export const financePrograms: Program[] = [
 	{
 		id: 'youth-savings',
+		dateModified: '2026-04-18',
 		title: '청년도약계좌',
 		description: '매월 최대 70만원 저축 시 정부 기여금 지급',
 		category: 'finance',
@@ -20,6 +21,7 @@ export const financePrograms: Program[] = [
 	},
 	{
 		id: 'youth-hope-savings',
+		dateModified: '2026-04-18',
 		title: '청년희망적금',
 		description: '매월 최대 50만원 저축 시 저축장려금 지급',
 		category: 'finance',
@@ -37,6 +39,7 @@ export const financePrograms: Program[] = [
 	},
 	{
 		id: 'youth-sunflower-loan',
+		dateModified: '2026-04-18',
 		title: '햇살론 유스',
 		description: '저소득·저신용 청년 대상 저금리 대출 (연 3.6% 이내)',
 		category: 'finance',
@@ -54,6 +57,7 @@ export const financePrograms: Program[] = [
 	},
 	{
 		id: 'youth-tax-deduction',
+		dateModified: '2026-04-18',
 		title: '청년 소득세 감면',
 		description: '중소기업 취업 청년의 소득세 90% 감면 (5년간)',
 		category: 'finance',
@@ -71,6 +75,7 @@ export const financePrograms: Program[] = [
 	},
 	{
 		id: 'youth-housing-fund',
+		dateModified: '2026-04-18',
 		title: '청년 주택드림 청약통장',
 		description: '청년 우대 금리가 적용되는 주택청약 전용 통장',
 		category: 'finance',

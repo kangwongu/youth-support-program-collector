@@ -3,6 +3,7 @@ import type { Program } from '$lib/types';
 export const jobsPrograms: Program[] = [
 	{
 		id: 'kwork-youth',
+		dateModified: '2026-04-18',
 		title: '국민취업지원제도',
 		description: '취업 지원 서비스와 구직촉진수당 월 50만원 지급',
 		category: 'jobs',
@@ -20,6 +21,7 @@ export const jobsPrograms: Program[] = [
 	},
 	{
 		id: 'youth-internship',
+		dateModified: '2026-04-18',
 		title: '청년인턴(체험형·채용형)',
 		description: '공공기관 및 중소기업 인턴십 기회 제공',
 		category: 'jobs',
@@ -37,6 +39,7 @@ export const jobsPrograms: Program[] = [
 	},
 	{
 		id: 'seoul-youth-job',
+		dateModified: '2026-04-18',
 		title: '서울시 뉴딜일자리',
 		description: '서울시 공공·민간 분야 청년 일자리 제공 (최대 11개월)',
 		category: 'jobs',
@@ -54,6 +57,7 @@ export const jobsPrograms: Program[] = [
 	},
 	{
 		id: 'gyeonggi-youth-job-bonus',
+		dateModified: '2026-04-18',
 		title: '경기도 청년 노동자 통장',
 		description: '일하는 청년에게 매월 저축 시 경기도가 매칭 지원금 지급',
 		category: 'jobs',
@@ -71,6 +75,7 @@ export const jobsPrograms: Program[] = [
 	},
 	{
 		id: 'youth-tomorrow-fill',
+		dateModified: '2026-04-18',
 		title: '청년내일채움공제',
 		description: '중소기업 취업 청년의 자산 형성을 위한 3년 만기 공제',
 		category: 'jobs',

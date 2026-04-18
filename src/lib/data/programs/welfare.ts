@@ -3,6 +3,7 @@ import type { Program } from '$lib/types';
 export const welfarePrograms: Program[] = [
 	{
 		id: 'youth-mental-health',
+		dateModified: '2026-04-18',
 		title: '청년 마음건강 지원',
 		description: '전문 심리상담 서비스 최대 8회 무료 제공',
 		category: 'welfare',
@@ -20,6 +21,7 @@ export const welfarePrograms: Program[] = [
 	},
 	{
 		id: 'youth-activity-support',
+		dateModified: '2026-04-18',
 		title: '청년수당(청년활동지원금)',
 		description: '미취업 청년에게 월 50만원씩 최대 6개월 지원',
 		category: 'welfare',
@@ -37,6 +39,7 @@ export const welfarePrograms: Program[] = [
 	},
 	{
 		id: 'youth-health-checkup',
+		dateModified: '2026-04-18',
 		title: '청년 건강검진 지원',
 		description: '만 19~39세 청년 대상 국가건강검진 및 추가 검진 지원',
 		category: 'welfare',
@@ -54,6 +57,7 @@ export const welfarePrograms: Program[] = [
 	},
 	{
 		id: 'seoul-youth-allowance-plus',
+		dateModified: '2026-04-18',
 		title: '서울시 청년 교통비 지원',
 		description: '서울시 거주 청년의 대중교통비 연 10만원 지원',
 		category: 'welfare',
@@ -71,6 +75,7 @@ export const welfarePrograms: Program[] = [
 	},
 	{
 		id: 'gyeonggi-youth-welfare',
+		dateModified: '2026-04-18',
 		title: '경기도 청년 면접수당',
 		description: '취업 준비 중인 경기도 청년에게 면접 교통비 지원',
 		category: 'welfare',

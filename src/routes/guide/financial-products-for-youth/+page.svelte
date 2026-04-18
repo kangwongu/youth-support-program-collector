@@ -1,5 +1,8 @@
 <script lang="ts">
 	import ArticleLayout from '$lib/components/ArticleLayout.svelte';
+	import { guideMap } from '$lib/data/guides';
+
+	const meta = guideMap['financial-products-for-youth'];
 </script>
 
 <svelte:head>
@@ -10,7 +13,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout title="청년 전용 금융상품 한눈에 보기" description="청년도약계좌, 청년희망적금, 주택드림통장 등 청년 전용 금융상품을 비교합니다.">
+<ArticleLayout title={meta.title} description={meta.description} slug={meta.slug} publishedAt={meta.publishedAt} updatedAt={meta.updatedAt} author={meta.author} faq={meta.faq}>
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">💰 청년 전용 금융상품 한눈에 보기</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">

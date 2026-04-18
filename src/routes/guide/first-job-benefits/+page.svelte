@@ -1,5 +1,8 @@
 <script lang="ts">
 	import ArticleLayout from '$lib/components/ArticleLayout.svelte';
+	import { guideMap } from '$lib/data/guides';
+
+	const meta = guideMap['first-job-benefits'];
 </script>
 
 <svelte:head>
@@ -10,7 +13,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout title="사회초년생이 꼭 알아야 할 지원 혜택" description="내일채움공제, 소득세 감면, 국민취업지원제도 등 사회초년생을 위한 필수 지원 혜택을 정리했습니다.">
+<ArticleLayout title={meta.title} description={meta.description} slug={meta.slug} publishedAt={meta.publishedAt} updatedAt={meta.updatedAt} author={meta.author} faq={meta.faq}>
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">💼 사회초년생이 꼭 알아야 할 지원 혜택</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">

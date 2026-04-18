@@ -1,5 +1,10 @@
 export type Category = 'housing' | 'jobs' | 'education' | 'welfare' | 'startup' | 'finance';
 
+export interface FaqItem {
+	q: string;
+	a: string;
+}
+
 export interface Program {
 	id: string;
 	title: string;
@@ -12,9 +17,11 @@ export interface Program {
 	deadline: string | null;
 	tags: string[];
 	content: string;
+	dateModified: string;
 	applicationMethod?: string;
 	applicationPeriod?: string;
 	requiredDocuments?: string[];
+	faq?: FaqItem[];
 }
 
 export interface CategoryInfo {

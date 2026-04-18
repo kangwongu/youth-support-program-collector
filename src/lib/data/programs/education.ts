@@ -3,6 +3,7 @@ import type { Program } from '$lib/types';
 export const educationPrograms: Program[] = [
 	{
 		id: 'youth-digital-academy',
+		dateModified: '2026-04-18',
 		title: '청년 디지털 아카데미',
 		description: 'IT·디지털 직무 교육 및 취업 연계 프로그램',
 		category: 'education',
@@ -20,6 +21,7 @@ export const educationPrograms: Program[] = [
 	},
 	{
 		id: 'kmooc',
+		dateModified: '2026-04-18',
 		title: 'K-MOOC (한국형 온라인 공개강좌)',
 		description: '대학 수준 온라인 강좌 무료 수강',
 		category: 'education',
@@ -36,6 +38,7 @@ export const educationPrograms: Program[] = [
 	},
 	{
 		id: 'youth-tomorrow-learning-card',
+		dateModified: '2026-04-18',
 		title: '국민내일배움카드',
 		description: '직업 훈련비 최대 500만원 지원',
 		category: 'education',
@@ -53,6 +56,7 @@ export const educationPrograms: Program[] = [
 	},
 	{
 		id: 'seoul-youth-mentoring',
+		dateModified: '2026-04-18',
 		title: '서울시 청년 멘토링 프로그램',
 		description: '현직 전문가와 1:1 멘토링으로 진로·취업 역량 강화',
 		category: 'education',
@@ -70,6 +74,7 @@ export const educationPrograms: Program[] = [
 	},
 	{
 		id: 'youth-global-competency',
+		dateModified: '2026-04-18',
 		title: '해외취업지원(K-Move 스쿨)',
 		description: '해외 취업을 위한 어학·직무 교육 및 취업 알선 지원',
 		category: 'education',

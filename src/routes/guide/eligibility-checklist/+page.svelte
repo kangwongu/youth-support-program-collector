@@ -1,5 +1,8 @@
 <script lang="ts">
 	import ArticleLayout from '$lib/components/ArticleLayout.svelte';
+	import { guideMap } from '$lib/data/guides';
+
+	const meta = guideMap['eligibility-checklist'];
 </script>
 
 <svelte:head>
@@ -10,7 +13,7 @@
 	<meta property="og:type" content="article" />
 </svelte:head>
 
-<ArticleLayout title="나에게 맞는 청년 정책 찾기 체크리스트" description="나이, 소득, 취업 상태, 거주 지역 등 조건별로 나에게 맞는 청년 정책을 찾아보세요.">
+<ArticleLayout title={meta.title} description={meta.description} slug={meta.slug} publishedAt={meta.publishedAt} updatedAt={meta.updatedAt} author={meta.author} faq={meta.faq}>
 	<h1 class="mb-6 text-2xl font-bold text-gray-900">✅ 나에게 맞는 청년 정책 찾기 체크리스트</h1>
 
 	<div class="space-y-5 leading-relaxed text-gray-600">
